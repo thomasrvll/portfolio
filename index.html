@@ -1,0 +1,94 @@
+<!-- Informando ao navegador que o arquivo é um html5 e definindo o idioma da página como pt br -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- Cabeçalho do documento, onde são definidos metadados, titulo e "links" para arquivos -->
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Thomas Ravel</title>
+    
+    <!-- conecta o arquivo com um outro css para definir o estilo da pagina -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- aqui contem um cabeçalho principal da pagina com um menu de navegação -->
+    <header>
+        <nav>
+            <ul>
+                
+                <li><a href="#" class="nav-link active-link" data-target="sobre">Sobre mim</a></li>
+                <li><a href="#" class="nav-link" data-target="formacao">Formação</a></li>
+                <li><a href="#" class="nav-link" data-target="portfolio">Portfólio</a></li>
+                <li><a href="#" class="nav-link" data-target="contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+       
+        <section id="sobre" class="content-section active">
+            <h2>Sobre mim</h2>
+            <p>
+                <!-- Uma breve apresentação sobre mim-->
+                Meu nome é Thomas Ravel, tenho 20 anos e atualmente trabalho na área de tecnologia de forma autônoma, estou na área há pouco menos de 2 anos. Nesse meio tempo, desenvolvi programas para Android usando tecnologias como: Python, Android Debug Bridge (adb), entre outros. Quanto a mim, gosto de aprender, sou paciente e focado em meus objetivos.
+            </p>
+        </section>
+
+        <!-- sobre formação acadêmica -->
+        <section id="formacao" class="content-section">
+            <h2>Formação</h2>
+            <p>
+                Cursando ensino superior em Análise e Desenvolvimento de Sistemas na UNINTER.
+            </p>
+        </section>
+
+        <!-- Parte que contém link para o GitHub -->
+        <section id="portfolio" class="content-section">
+            <h2>Portfólio</h2>
+            <p>
+                Meus projetos e contribuições podem ser encontrados no meu perfil do GitHub.
+            </p>
+            <!-- Link que abre o gitHub -->
+            <a href="https://github.com/thomasrvll" target="_blank" class="portfolio-link">Visitar GitHub</a>
+        </section>
+
+        <!-- Contato com um formulário Simples -->
+        <section id="contato" class="content-section">
+            <h2>Contato</h2>
+            <form>
+                <!-- Campo para nome -->
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                </div>
+                <!-- Campo para e-mail -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com">
+                </div>
+                <!-- Campo para mensagem -->
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Deixe sua mensagem aqui..."></textarea>
+                </div>
+                <!-- Definindo o botão de enviar  -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- rodapé bem simplifiado-->
+    <footer>
+        <p>Desenvolvido por Thomas Ravel - 2025</p>
+    </footer>
+
+    <!-- Conectando outro arquivo (javascript) para interação-->
+    <script src="portfolio.js"></script>
+
+</body>
+</html>
