@@ -1,0 +1,177 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f9; /* Um cinza claro*/
+    color: #333; /* Cor de texto escura*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garantindo que os cantos arredondados sejam aplicados*/
+}
+
+/* --- Cabeçalho e navegação --- */
+header {
+    border-bottom: 1px solid #eeeeee;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #555;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2a7ae2;
+    background-color: #f0f6ff;
+}
+
+/* estilo pra o link da página ativa */
+nav ul li a.active-link {
+    color: #2a7ae2;
+    font-weight: 600;
+}
+
+/* --- Conteudo principal --- */
+main {
+    padding: 40px 50px;
+}
+
+.content-section {
+    display: none; 
+    animation: fadeIn 0.6s ease;
+}
+
+.content-section.active {
+    display: block; 
+}
+
+h2 {
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #2a7ae2;
+    display: inline-block;
+}
+
+p {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- estilo do formulario --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #2a7ae2;
+    box-shadow: 0 0 5px rgba(42, 122, 226, 0.2);
+}
+
+form button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2a7ae2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #205cbe;
+    transform: translateY(-2px);
+}
+
+/* --- Portfólio --- */
+.portfolio-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 30px;
+    background-color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.portfolio-link:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+}
+
+/* --- rodapé --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    color: #888;
+    font-size: 0.9rem;
+}
